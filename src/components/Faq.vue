@@ -6,6 +6,9 @@
       :item="faq"
       @collapse="collapseItem($event, i)"
     />
+    <p class="empty-data" v-if="records.length < 1">
+      No frequently asked quesstions founds.
+    </p>
   </div>
 </template>
 
@@ -17,8 +20,7 @@ export default {
   props: {
     records: {
       type: Array,
-      required: false,
-      default: () => []
+      required: true
     }
   },
   components: {
@@ -36,4 +38,10 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.empty-data {
+  text-align: center;
+  border-bottom: 1px solid #f2f2f2;
+  padding-bottom: 2rem;
+}
+</style>

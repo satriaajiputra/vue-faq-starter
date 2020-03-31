@@ -2,7 +2,7 @@
   <header class="header">
     <div class="container">
       <h1 class="header__title">
-        Any Questions?
+        Frequently Asked Questions
       </h1>
       <form-search :in-header="true" />
     </div>

@@ -5,17 +5,30 @@
       type="text"
       name="search"
       placeholder="Search question"
+      v-model="query"
     />
   </form>
 </template>
 
 <script>
+import eventBus from "@/utils/event-bus";
+
 export default {
   props: {
     inHeader: {
       type: Boolean,
       default: false,
       required: false
+    }
+  },
+  data() {
+    return {
+      query: ""
+    };
+  },
+  watch: {
+    query(n) {
+      eventBus.$emit("search", n);
     }
   }
 };

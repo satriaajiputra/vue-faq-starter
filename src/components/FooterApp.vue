@@ -19,7 +19,7 @@ export default {};
 <style lang="scss" scoped>
 .footer {
   text-align: center;
-  margin-top: 3rem;
+  margin: 3rem 0;
   &,
   a {
     color: #777;

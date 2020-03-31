@@ -12,6 +12,7 @@
 import HeaderApp from "@/components/HeaderApp.vue";
 import FooterApp from "@/components/FooterApp.vue";
 import Faq from "@/components/Faq.vue";
+import eventBus from "@/utils/event-bus";
 
 export default {
   name: "App",
@@ -22,27 +23,35 @@ export default {
   },
   data() {
     return {
-      records: [
-        {
-          id: 1,
-          title: "How do I cancle the order, I have placed?",
-          content:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores dolorum natus maiores error repellat, libero aliquam iure dolor aspernatur. Laborum est laboriosam totam. Error hic recusandae inventore, quas sequi dolorem!"
-        },
-        {
-          id: 2,
-          title: "How do I create a Return Request?",
-          content:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores dolorum natus maiores error repellat, libero aliquam iure dolor aspernatur. Laborum est laboriosam totam. Error hic recusandae inventore, quas sequi dolorem!"
-        },
-        {
-          id: 3,
-          title: "How do I cancle the order, I have placed?",
-          content:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores dolorum natus maiores error repellat, libero aliquam iure dolor aspernatur. Laborum est laboriosam totam. Error hic recusandae inventore, quas sequi dolorem!"
-        }
-      ]
+      recordsData: [],
+      records: []
     };
+  },
+  created() {
+    fetch(
+      "https://my-json-server.typicode.com/satriaajiputra/vue-faq-starter/faq"
+    )
+      .then(res => res.json())
+      .then(json => {
+        this.recordsData = json;
+        this.records = json;
+      });
+  },
+  mounted() {
+    eventBus.$on("search", q => this.search(q));
+  },
+  methods: {
+    search(q) {
+      if (q.length < 1) {
+        this.records = this.recordsData;
+      } else {
+        this.records = this.recordsData.filter(
+          row =>
+            row.title.toLowerCase().match(q) ||
+            row.content.toLowerCase().match(q)
+        );
+      }
+    }
   }
 };
 </script>
@@ -54,6 +63,10 @@ export default {
   margin: 0;
   box-sizing: border-box;
   font-family: "PT Serif", serif;
+}
+
+body {
+  color: #777;
 }
 
 .container {
