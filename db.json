@@ -1,0 +1,39 @@
+{
+  "faq": [
+    {
+      "id": 1,
+      "title": "How about order procedure?",
+      "content": "Nulla a tortor et libero blandit pulvinar eget nec nunc. Pellentesque rhoncus quam vel felis egestas, at congue arcu vulputate. Pellentesque eleifend"
+    },
+    {
+      "id": 2,
+      "title": "How to claim warranty?",
+      "content": "Vestibulum vitae nunc sodales, lobortis leo ut, efficitur metus. Aliquam pulvinar lectus metus. Duis nulla nulla, mollis non ornare nec, gravida mattis est."
+    },
+    {
+      "id": 3,
+      "title": "Can I refund when the order is processing?",
+      "content": "Aenean aliquet condimentum lorem maximus vestibulum. Nam tristique justo lacinia, euismod risus vel, cursus odio. Nam iaculis euismod maximus."
+    },
+    {
+      "id": 4,
+      "title": "How long waranty time?",
+      "content": "Maecenas lacinia condimentum tincidunt. Praesent rhoncus, orci sed facilisis pretium, tortor libero condimentum tortor, quis dignissim elit tellus vitae metus."
+    },
+    {
+      "id": 5,
+      "title": "How about order procedure?",
+      "content": "Nulla a tortor et libero blandit pulvinar eget nec nunc. Pellentesque rhoncus quam vel felis egestas, at congue arcu vulputate. Pellentesque eleifend"
+    },
+    {
+      "id": 6,
+      "title": "How to claim warranty?",
+      "content": "Vestibulum vitae nunc sodales, lobortis leo ut, efficitur metus. Aliquam pulvinar lectus metus. Duis nulla nulla, mollis non ornare nec, gravida mattis est."
+    },
+    {
+      "id": 7,
+      "title": "Can I refund when the order is processing?",
+      "content": "Aenean aliquet condimentum lorem maximus vestibulum. Nam tristique justo lacinia, euismod risus vel, cursus odio. Nam iaculis euismod maximus."
+    }
+  ]
+}
